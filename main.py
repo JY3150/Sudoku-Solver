@@ -1,13 +1,4 @@
-GRID = [[3, 0, 0, 0, 2, 0, 0, 0, 7],
-        [0, 0, 0, 5, 0, 1, 0, 0, 0],
-        [0, 0, 9, 0, 8, 0, 4, 0, 0],
-        [0, 8, 0, 0, 0, 0, 0, 1, 0],
-        [4, 0, 6, 0, 5, 0, 2, 0, 9],
-        [0, 5, 0, 0, 0, 0, 0, 4, 0],
-        [0, 0, 8, 0, 9, 0, 6, 0, 0],
-        [0, 0, 0, 7, 0, 2, 0, 0, 0],
-        [7, 0, 0, 0, 1, 0, 0, 0, 3],
-        ]
+
 import json
 
 print("enter solve() to start")
@@ -34,17 +25,6 @@ def print_grid(gridx) -> None:
 
 
 def create_grid() -> None:
-    # numbers_left = True
-    # while numbers_left:
-    #     print('Now you need to put in the numbers in the format "ijk" if the k is in the ith row and the jth column')
-    #     x = input()
-    #     a, b, c = int(x[0]), int(x[1]), int(x[2])
-    #     GRID[a - 1][b - 1] = c
-    #
-    #     d = input('type * to stop input, or type any other thing to continue input')
-    #     if d == '*':
-    #         numbers_left = False
-
     print("Here's the sudoku template, copy and change it as you need")
     print("[0,0,0|0,0,0|0,0,0]")
     for i in range(9):
@@ -121,8 +101,6 @@ def solve_sudoku(grid) -> bool:
 def solve() -> None:
     create_grid()
 
-    # print('This is your sudoku\\')
-    # print_grid(GRID)
     if solve_sudoku(GRID):
         print("Here is the solution")
         print_grid(GRID)
